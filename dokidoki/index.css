@@ -1,0 +1,21 @@
+body {
+    width: 100vh;
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart img {
+    width: 260px;
+    height: 260px;
+}
+
+.heart img:hover {
+    animation: 1s doki ease-out infinite alternate;
+}
+
+@keyframes doki {
+    0% { height: 260px; width: 260px; }
+    100% { height: 360px; width: 360px; }
+}
