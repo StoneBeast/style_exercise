@@ -1,0 +1,51 @@
+body {
+  background-color: #fff001;
+  height: 97vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  position: relative;
+  font-size: 100px;
+  color: #000000;
+  margin: 0 auto;
+  width: 750px;
+}
+
+.text::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 3px;
+  text-shadow: 3px 0 #51b9d8;
+  animation: ani2 2s linear infinite alternate-reverse;
+  background-color: #fff001;
+}
+
+.text::after {
+  content: attr(data-text);
+  background-color: #fff001;
+  position: absolute;
+  left: -3px;
+  text-shadow: -3px 0 #51b9d8;
+  animation: ani1 2s linear infinite alternate-reverse;
+}
+
+@keyframes ani1 {
+  $steps: 25;
+  @for $i from 0 through $steps {
+    #{percentage($i * (1/$steps))} {
+      clip-path: inset(random(100)+px 0 random(100)+px 0);
+    }
+  }
+}
+
+@keyframes ani2 {
+  $steps: 25;
+  @for $i from 0 through $steps {
+    #{percentage($i * (1/$steps))} {
+      clip-path: inset(0 random(100)+px 0 random(100)+px);
+    }
+  }
+}

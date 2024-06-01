@@ -1,0 +1,196 @@
+body {
+  background-color: #fff001;
+  height: 97vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  position: relative;
+  font-size: 100px;
+  color: #000000;
+  margin: 0 auto;
+  width: 750px;
+}
+
+.text::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 3px;
+  text-shadow: 3px 0 #51b9d8;
+  animation: ani2 2s linear infinite alternate-reverse;
+  background-color: #fff001;
+}
+
+.text::after {
+  content: attr(data-text);
+  background-color: #fff001;
+  position: absolute;
+  left: -3px;
+  text-shadow: -3px 0 #51b9d8;
+  animation: ani1 2s linear infinite alternate-reverse;
+}
+
+@keyframes ani1 {
+  0% {
+    clip-path: inset(28px 0 79px 0);
+  }
+  4% {
+    clip-path: inset(67px 0 72px 0);
+  }
+  8% {
+    clip-path: inset(4px 0 85px 0);
+  }
+  12% {
+    clip-path: inset(64px 0 99px 0);
+  }
+  16% {
+    clip-path: inset(72px 0 51px 0);
+  }
+  20% {
+    clip-path: inset(50px 0 92px 0);
+  }
+  24% {
+    clip-path: inset(69px 0 56px 0);
+  }
+  28% {
+    clip-path: inset(50px 0 63px 0);
+  }
+  32% {
+    clip-path: inset(16px 0 46px 0);
+  }
+  36% {
+    clip-path: inset(41px 0 79px 0);
+  }
+  40% {
+    clip-path: inset(46px 0 4px 0);
+  }
+  44% {
+    clip-path: inset(87px 0 99px 0);
+  }
+  48% {
+    clip-path: inset(39px 0 4px 0);
+  }
+  52% {
+    clip-path: inset(33px 0 31px 0);
+  }
+  56% {
+    clip-path: inset(61px 0 93px 0);
+  }
+  60% {
+    clip-path: inset(81px 0 82px 0);
+  }
+  64% {
+    clip-path: inset(65px 0 58px 0);
+  }
+  68% {
+    clip-path: inset(70px 0 74px 0);
+  }
+  72% {
+    clip-path: inset(26px 0 97px 0);
+  }
+  76% {
+    clip-path: inset(41px 0 41px 0);
+  }
+  80% {
+    clip-path: inset(27px 0 92px 0);
+  }
+  84% {
+    clip-path: inset(15px 0 48px 0);
+  }
+  88% {
+    clip-path: inset(89px 0 97px 0);
+  }
+  92% {
+    clip-path: inset(21px 0 64px 0);
+  }
+  96% {
+    clip-path: inset(72px 0 87px 0);
+  }
+  100% {
+    clip-path: inset(72px 0 81px 0);
+  }
+}
+@keyframes ani2 {
+  0% {
+    clip-path: inset(0 63px 0 25px);
+  }
+  4% {
+    clip-path: inset(0 20px 0 38px);
+  }
+  8% {
+    clip-path: inset(0 64px 0 83px);
+  }
+  12% {
+    clip-path: inset(0 96px 0 46px);
+  }
+  16% {
+    clip-path: inset(0 92px 0 5px);
+  }
+  20% {
+    clip-path: inset(0 48px 0 79px);
+  }
+  24% {
+    clip-path: inset(0 68px 0 35px);
+  }
+  28% {
+    clip-path: inset(0 11px 0 25px);
+  }
+  32% {
+    clip-path: inset(0 98px 0 71px);
+  }
+  36% {
+    clip-path: inset(0 48px 0 5px);
+  }
+  40% {
+    clip-path: inset(0 1px 0 61px);
+  }
+  44% {
+    clip-path: inset(0 95px 0 97px);
+  }
+  48% {
+    clip-path: inset(0 51px 0 31px);
+  }
+  52% {
+    clip-path: inset(0 96px 0 76px);
+  }
+  56% {
+    clip-path: inset(0 100px 0 94px);
+  }
+  60% {
+    clip-path: inset(0 96px 0 10px);
+  }
+  64% {
+    clip-path: inset(0 25px 0 95px);
+  }
+  68% {
+    clip-path: inset(0 78px 0 11px);
+  }
+  72% {
+    clip-path: inset(0 86px 0 62px);
+  }
+  76% {
+    clip-path: inset(0 59px 0 44px);
+  }
+  80% {
+    clip-path: inset(0 15px 0 74px);
+  }
+  84% {
+    clip-path: inset(0 79px 0 71px);
+  }
+  88% {
+    clip-path: inset(0 91px 0 68px);
+  }
+  92% {
+    clip-path: inset(0 85px 0 75px);
+  }
+  96% {
+    clip-path: inset(0 79px 0 16px);
+  }
+  100% {
+    clip-path: inset(0 20px 0 14px);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
