@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <style>
+    @property --round {
+      syntax: "<angle>";
+      initial-value: 0deg;
+      inherits: false;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .box {
+      --round: 360deg;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      background: conic-gradient(transparent var(--round), green var(--round));
+      border: 2px solid aliceblue;
+    }
+
+    .box-core {
+      position: relative;
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      background-color: aliceblue;
+    }
+
+    .tick {
+      position: absolute;
+      left: 28px;
+      top: 8px;
+      width: 30px;
+      height: 50px;
+      border-bottom: 5px solid green;
+      border-right: 5px solid green;
+      background-color: transparent;
+      transform: rotate(45deg);
+    }
+
+    .tick-core {
+      position: absolute;
+      right: -6px;
+      width: 36px;
+      height: 56px;
+      background-color: aliceblue;
+      transform: rotate(0deg);
+    }
+
+    input:checked~.box {
+      animation: rounded 1s linear forwards;
+    }
+
+    input:checked~.box .tick-core {
+      animation: ticked 1s linear 1s forwards;
+    }
+
+    @keyframes rounded {
+      0% {
+        --round: 360deg;
+      }
+
+      100% {
+        --round: 0deg;
+      }
+    }
+
+    @keyframes ticked {
+      0% {
+        width: 36px;
+        height: 56px;
+      }
+
+      33% {
+        width: 7px;
+        height: 56px;
+      }
+
+      100% {
+        width: 7px;
+        height: 0px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <input type="checkbox" />
+  <div class="box">
+    <div class="box-core">
+      <div class="tick">
+        <div class="tick-core"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
