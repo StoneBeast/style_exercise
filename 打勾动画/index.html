@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打勾动画</title>
+    <style>
+      body {
+        height: 95vh;
+        width: 97vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+          flex-direction: column;
+      }
+
+      .ele-circle {
+        stroke-dasharray: 1194;
+        stroke-dashoffset: 1194;
+      }
+
+      .ele-line {
+        stroke-dasharray: 350;
+        stroke-dashoffset: 350;
+      }
+
+      input:checked~svg>.svg-ele{
+          stroke-dashoffset: 0;
+          transition: all 1s;
+      }
+
+      input:checked~svg>.svg-ele{
+          stroke-dashoffset: 0;
+          transition: all 1s;
+      }
+
+      input:checked~h2{
+          color: rgba(0, 0, 0, 1);
+          transition: all 1.5s;
+      }
+
+      h2 {
+          color: rgba(0, 0, 0, 0);
+      }
+    </style>
+</head>
+<body>
+
+  <input type="checkbox" name="" id="">
+  <svg width="400" height="400">
+    <circle class="ele-circle svg-ele" fill="none" r="190" stroke="#68e534"
+            stroke-width="20" cy="200" cx="200" ></circle>
+    <polyline class="ele-line svg-ele" points="88,214 173,284 304,138" fill="none" stroke="#68e534"
+              stroke-width="24" stroke-linecap="round" stroke-linejoin="round"></polyline>
+  </svg>
+  <h2>成功</h2>
+
+</body>
+</html>
