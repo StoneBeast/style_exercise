@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>流水灯边框</title>
+    <style>
+      body {
+        background-color: #1c1c1c;
+      }
+
+      #container {
+        height: 94vh;
+        width: 96vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      #box {
+        height: 30vmin;
+        width: 50vmin;
+        color: #efeeee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        font-size: 7vmin;
+        position: relative;
+        overflow: hidden;
+        z-index: 10;
+      }
+
+      #box::before {
+        content: '';
+        width: 200%;
+        height: 200%;
+        background-color: #20292e;
+        position: absolute;
+        left: -50%;
+        top: -50%;
+        background-image: conic-gradient(
+            transparent, #66ddf7, transparent 30%
+        );
+        animation: rotate-bc 5s linear infinite;
+        z-index: -2;
+      }
+
+      @keyframes rotate-bc {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      #box::after {
+        content: '';
+        background-color: #000000;
+        position: absolute;
+        z-index: -1;
+        inset: 1vmin;
+        border-radius: 20px;
+      }
+    </style>
+</head>
+<body>
+
+<div id="container">
+  <div id="box">
+    流水灯边框
+  </div>
+</div>
+
+</body>
+</html>
