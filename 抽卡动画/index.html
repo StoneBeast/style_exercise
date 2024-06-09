@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抽卡动画</title>
+    <style>
+        body {
+            background-color: #1c1c1c;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            height: 36vmin;
+            width: 24vmin;
+            background-color: #51b9d8;
+            color: rgba(239, 238, 238, 0);
+            border-radius: 8px;
+            border: solid 10px rgba(0, 0, 0, .1);
+            font-size: 15vmin;
+            filter: hue-rotate(calc(var(--i) * 40deg));
+            transform-origin: 50% 100%;
+            transition: all 0.5s;
+        }
+
+        #container:hover .card{
+            transition: all 0.5s;
+            transform: rotate(calc(var(--i) * 5deg))
+                        translate(calc(var(--i) * 15vmin), -50px);
+            color: rgba(239, 238, 238, 0.5);
+            cursor: pointer;
+        }
+
+         .card:active {
+            z-index: 99;
+            translate: calc(var(--i) * 20px) -50px;
+            scale: 105%;
+            transition: all 0.5s;
+        }
+
+        #container:active>.card:not(:active) {
+            background-color: #bebebe;
+            scale: 95%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="card" style="--i: -4;">1</div>
+        <div class="card" style="--i: -3;">2</div>
+        <div class="card" style="--i: -2;">3</div>
+        <div class="card" style="--i: -1;">4</div>
+        <div class="card" style="--i: 0;">5</div>
+        <div class="card" style="--i: 1;">6</div>
+        <div class="card" style="--i: 2;">7</div>
+        <div class="card" style="--i: 3;">8</div>
+        <div class="card" style="--i: 4;">9</div>
+    </div>
+</body>
+</html>
