@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>骨架屏</title>
+    <style>
+        body {
+            background-color: #fefefe;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 92vh;
+            min-width: 95vw;
+            overflow: hidden;
+
+        }
+
+        .card {
+            box-shadow: 0 0 5px #c7c7c7;
+            display: flex;
+            flex-direction: column;
+            min-width: 16rem;
+            min-height: 20rem;
+            border-radius: 10px;
+            justify-content: space-between;
+        }
+
+        .item-card {
+            border-radius: 4px;
+            background: linear-gradient(
+                100deg,
+                rgba(255, 255, 255, 0) 40%,
+                rgba(255, 255, 255, .5) 50%,
+                rgba(255, 255, 255, 0) 60%
+            ) #efefef;
+            background-size: 200% 100%;
+            background-position-x: 120%;
+            animation: loading 1s ease-in-out infinite;
+        }
+        @keyframes loading {
+            to{
+                background-position-x: -20%;
+            }
+        }
+
+        .item-card.image-card {
+            /*flex-grow: 1;*/
+            min-height: 10rem;
+            min-width: 12rem;
+        }
+
+        .title-card {
+            min-height: 2rem;
+            min-width: 10rem;
+            margin: 0 1rem;
+        }
+
+        .text-card {
+            min-height: 5rem;
+            min-width: 10rem;
+            margin: 0 1rem 1.5rem;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="card">
+        <div class="image-card item-card"></div>
+        <div class="title-card item-card"></div>
+        <div class="text-card item-card"></div>
+    </div>
+</div>
+</body>
+</html>
